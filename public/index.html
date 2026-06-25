@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>001 - 炫酷落地页</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="page-header">
+      <div class="brand">
+        <div class="brand-mark">001</div>
+        <div>
+          <p>GitHub Pages 演示</p>
+          <strong>前后端组合</strong>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#features">特点</a>
+        <a href="#backend">后端</a>
+        <a href="#deploy">部署</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">落地页 + 后端</p>
+        <h1>科技感视觉落地页，<br />配套简洁后端演示。</h1>
+        <p class="hero-text">借助 GitHub Actions 自动部署静态页面到 Pages，同时提供简单 Express 后端示例，满足展示与开发双重需求。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#features">立即体验</a>
+          <a class="btn btn-secondary" href="#backend">查看接口</a>
+        </div>
+      </div>
+
+      <div class="hero-panel">
+        <div class="panel-card premium-card">
+          <span class="panel-badge">在线部署</span>
+          <h2>GitHub Pages</h2>
+          <p>自动部署 `public/` 目录至 `gh-pages`，无需额外服务器即可上线。</p>
+          <div class="panel-stats">
+            <div>
+              <strong>3</strong>
+              <span>演示接口</span>
+            </div>
+            <div>
+              <strong>1</strong>
+              <span>落地页</span>
+            </div>
+            <div>
+              <strong>Express</strong>
+              <span>后端</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section feature-grid">
+      <article class="feature-card">
+        <div class="feature-icon">✨</div>
+        <h2>动效视觉</h2>
+        <p>多层渐变光影、玻璃质感卡片与细腻过渡，令页面更具科技感与高级感。</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h2>极速部署</h2>
+        <p>基于 GitHub Actions 的自动化部署流程，推送到 main 分支后即触发上线。</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-icon">🔧</div>
+        <h2>后端示例</h2>
+        <p>提供 `Express` API 演示，可快速复制到本地或部署到任意 Node 平台。</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-icon">📱</div>
+        <h2>响应式设计</h2>
+        <p>从桌面到手机均可适配，保持视觉统一与用户体验流畅。</p>
+      </article>
+    </section>
+
+    <section class="section stats-section" id="deploy">
+      <div class="card glass-card stats-card">
+        <h2>部署说明</h2>
+        <p>这个仓库包含前端落地页和后端示例，前端通过 GitHub Pages 发布，后端可以本地运行用于演示数据。</p>
+        <pre class="code-sample"><code>git clone https://github.com/mollyway8/001.git
+cd 001
+# 前端自动部署在 main 分支上
+# 本地后端：cd backend && npm install && npm start
+</code></pre>
+      </div>
+      <div class="card glass-card highlight-card">
+        <h3>设计灵感</h3>
+        <p>用简洁的架构搭配精致视觉，适合项目展示页、个人作品集或启动页演示。</p>
+      </div>
+    </section>
+
+    <section id="backend" class="section api-section">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">后端演示</p>
+          <h2>简单但实用的 Express API</h2>
+        </div>
+      </div>
+
+      <div class="api-grid">
+        <article class="api-card">
+          <h3>GET /</h3>
+          <p>返回后端服务启动状态。</p>
+        </article>
+        <article class="api-card">
+          <h3>GET /api/status</h3>
+          <p>返回运行状态、时间戳与服务 uptime。</p>
+        </article>
+        <article class="api-card">
+          <h3>GET /api/quote</h3>
+          <p>返回一条随机激励语录，适合前端展示调用效果。</p>
+        </article>
+      </div>
+
+      <div class="fetch-panel">
+        <button id="fetchStatus" class="btn btn-primary">获取后端状态</button>
+        <div id="fetchResult" class="fetch-result">请先运行后端服务，再点击获取实时状态。</div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>后端启动：<code>cd backend && npm install && npm start</code></div>
+      <div>前端部署：GitHub Actions 会自动将 `public/` 发布到 `gh-pages`。</div>
+    </footer>
+  </div>
+</body>
+</html>
